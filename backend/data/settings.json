@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "scan_interval_minutes": 15,
+  "account_capital": 10000.0,
+  "max_risk_pct": 1.5,
+  "webhook_url": ""
+}

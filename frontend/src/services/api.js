@@ -40,3 +40,32 @@ export const checkHealth = async () => {
   const response = await client.get('/health');
   return response.data;
 };
+
+export const executeTradeCheck = async (ticker, accountCapital, maxRiskPct) => {
+  const response = await client.post('/trade-check', {
+    ticker,
+    account_capital: accountCapital,
+    max_risk_pct: maxRiskPct
+  });
+  return response.data;
+};
+
+export const getAutonomousSignals = async () => {
+  const response = await client.get('/autonomous/signals');
+  return response.data;
+};
+
+export const getAutonomousSettings = async () => {
+  const response = await client.get('/autonomous/settings');
+  return response.data;
+};
+
+export const updateAutonomousSettings = async (settings) => {
+  const response = await client.post('/autonomous/settings', settings);
+  return response.data;
+};
+
+export const triggerAutonomousScan = async () => {
+  const response = await client.post('/autonomous/trigger-scan');
+  return response.data;
+};

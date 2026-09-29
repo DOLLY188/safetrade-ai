@@ -79,6 +79,18 @@ export default function Navbar({ activeTab, setActiveTab, onSelectTicker }) {
             <FileSpreadsheet className="w-4 h-4" />
             Screener
           </button>
+
+          <button
+            onClick={() => setActiveTab('autonomous')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition ${
+              activeTab === 'autonomous'
+                ? 'bg-fuchsia-600 text-white shadow-md shadow-fuchsia-600/30'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+            }`}
+          >
+            <Activity className="w-4 h-4 text-fuchsia-300" />
+            24/7 Engine
+          </button>
         </div>
 
       </div>

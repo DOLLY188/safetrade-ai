@@ -7,7 +7,9 @@ from ..models.schemas import (
     AiChatResponse,
     SafetyPrediction,
     TradeCheckRequest,
-    TradeCheckResponse
+    TradeCheckResponse,
+    AutonomousSignal,
+    AutonomousSettings
 )
 from ..services.data_service import (
     fetch_stock_history,
@@ -128,6 +130,27 @@ async def chat_with_ai_analyst(payload: AiChatRequest):
         question=payload.question,
         answer=answer
     )
+
+@router.get("/autonomous/signals", response_model=List[AutonomousSignal])
+async def get_autonomous_signals():
+    from ..services.autonomous_engine import load_signals
+    return load_signals()
+
+@router.get("/autonomous/settings", response_model=AutonomousSettings)
+async def get_autonomous_settings():
+    from ..services.autonomous_engine import load_settings
+    return load_settings()
+
+@router.post("/autonomous/settings", response_model=AutonomousSettings)
+async def update_autonomous_settings(settings: AutonomousSettings):
+    from ..services.autonomous_engine import save_settings
+    save_settings(settings)
+    return settings
+
+@router.post("/autonomous/trigger-scan", response_model=List[AutonomousSignal])
+async def trigger_manual_scan():
+    from ..services.autonomous_engine import run_single_scan_cycle
+    return run_single_scan_cycle()
 
 @router.get("/health")
 async def health_check():

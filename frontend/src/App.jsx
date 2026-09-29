@@ -8,7 +8,10 @@ import TechnicalMetrics from './components/TechnicalMetrics';
 import StockScreener from './components/StockScreener';
 import TradeInspector from './components/TradeInspector';
 import AiAnalystChat from './components/AiAnalystChat';
+import AutonomousFeed from './components/AutonomousFeed';
 import { getStockDetails } from './services/api';
+
+// ... (skipping some lines for brevity in instruction, using precise replace below)
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -264,6 +267,11 @@ export default function App() {
         {/* Tab 3: Market Screener */}
         {activeTab === 'screener' && (
           <StockScreener onSelectTicker={handleSearch} />
+        )}
+
+        {/* Tab 4: Autonomous Engine */}
+        {activeTab === 'autonomous' && (
+          <AutonomousFeed onSelectTicker={handleSelectFromInspector} />
         )}
 
       </main>

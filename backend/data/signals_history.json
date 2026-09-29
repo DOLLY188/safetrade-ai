@@ -1,0 +1,53 @@
+[
+  {
+    "id": "QQQ_1790701471",
+    "timestamp": "2026-09-29 10:04:31",
+    "ticker": "QQQ",
+    "name": "Invesco QQQ Trust",
+    "price": 735.91,
+    "safety_score": 74.5,
+    "win_probability": 60.0,
+    "recommended_shares": 4,
+    "stop_loss": 717.51,
+    "target_price": 774.55,
+    "risk_reward_ratio": 2.1,
+    "max_dollar_loss": 73.6,
+    "potential_dollar_gain": 154.56,
+    "verdict": "PRIME SETUP DETECTED: Buy 4 shares of QQQ at $735.91. Immediately place your GTC Stop-Loss at $717.51 and Profit Target at $774.55. If stopped out, your loss is capped at $73.6. If target hits, profit is +$154.56.",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "SPY_1790701469",
+    "timestamp": "2026-09-29 10:04:29",
+    "ticker": "SPY",
+    "name": "SPDR S&P 500 ETF",
+    "price": 762.65,
+    "safety_score": 70.8,
+    "win_probability": 59.2,
+    "recommended_shares": 4,
+    "stop_loss": 743.58,
+    "target_price": 802.7,
+    "risk_reward_ratio": 2.1,
+    "max_dollar_loss": 76.28,
+    "potential_dollar_gain": 160.2,
+    "verdict": "PRIME SETUP DETECTED: Buy 4 shares of SPY at $762.65. Immediately place your GTC Stop-Loss at $743.58 and Profit Target at $802.7. If stopped out, your loss is capped at $76.28. If target hits, profit is +$160.2.",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "NVDA_1790701453",
+    "timestamp": "2026-09-29 10:04:13",
+    "ticker": "NVDA",
+    "name": "NVIDIA Corp.",
+    "price": 229.37,
+    "safety_score": 70.8,
+    "win_probability": 59.2,
+    "recommended_shares": 15,
+    "stop_loss": 221.51,
+    "target_price": 245.88,
+    "risk_reward_ratio": 2.1,
+    "max_dollar_loss": 117.9,
+    "potential_dollar_gain": 247.65,
+    "verdict": "PRIME SETUP DETECTED: Buy 15 shares of NVDA at $229.37. Immediately place your GTC Stop-Loss at $221.51 and Profit Target at $245.88. If stopped out, your loss is capped at $117.9. If target hits, profit is +$247.65.",
+    "status": "ACTIVE"
+  }
+]
